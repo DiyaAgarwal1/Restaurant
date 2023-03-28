@@ -875,21 +875,29 @@ footer{
       text-align: center;
       padding-top: 32px;
       padding-bottom: 30px;
-      margin-left: 15%;
+      margin-left: 8%;
+    }
+    .copyright {
+      display: inline-block;
+      width: 98%;
+      margin: 0;
     }
     .copyright__img-block {
-      width: 250px !important;
+      width: 98%;
       margin: 0;
-      margin-left: 2%;
+      margin-left: 5%;
       margin-bottom: 10px;
       border: none;
     }
     .copyright__text {
-      width: 550px;
+      width: 98%;
       font-size: 12px;
       color: #666;
       margin: 0;
       margin-left: 1%;
       line-height: 1.1em;
+    }
+    .copyright__img-block img{
+      width: 98%;
     }
   }

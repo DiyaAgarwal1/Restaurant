@@ -1,15 +1,13 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoodieHub</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/5.0.0/normalize.css"/>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link rel="stylesheet" href="/css/bookstyle.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" href="/css/loginstyle.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
   </head>
   <body class="main-page">
     <!--   main-header start's here -->
@@ -18,14 +16,14 @@
         <div class="nav-wrapper">
           <nav class="main-nav">
         <ul class="main-list">
-          <li class="main-list__item"><a href="javascript:void(0);" class="main-list__link">Write a Review</a></li>
-          <li class="main-list__item"><a href="javascript:void(0);" class="main-list__link">Events</a></li>
-          <li class="main-list__item"><a href="admin.html" class="main-list__link">Admin</a></li>
+          <li class="main-list__item"><a href="review.html" class="main-list__link">Write a Review</a></li>
+          <li class="main-list__item"><a href="index.html#events" class="main-list__link">Events</a></li>
+          <li class="main-list__item"><a href="book.html" class="main-list__link">Book</a></li>
         </ul>
       </nav>
           <div class="logon-box">
         <ul class="logon-list">
-          <li class="logon-list__item"><a href="login.html" class="logon-list__link Login">Log In</a></li>
+          <li class="logon-list__item"><a href="admin.html" class="logon-list__link Login">Admin</a></li>
           <li class="logon-list__item"><a href="signup.html" class="logon-list__link Login">Sign Up</a></li>
           <li class="logon-list__item"><a href="index.html" class="logon-list__link SignUp">Home</a></li>
         </ul>
@@ -33,40 +31,36 @@
         </div>
         <!-- Logo here -->
         <div class="main-logo">
-          <a href="#"><img src="images/logo.jpg" alt="yelp logo" width="160px" height="80px"/></a>
+          <a href="#"><img src="images/logo.jpg" alt="yelp logo" width="180px" height="100px"/></a>
         </div>
         <main class="main-content">
             <div class="main-wrapper">
               <h2 class="main-content__heading">FoodieHub Hyderabad</h2>
             </div>
-            <!-- Booking form -->
-            <section class="order-now">
-                <h1>Book your Restaurant</h1>
-                <form>
-                    <h3>Fill your Details</h3>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
-    
-                    <label for="mobile">Mobile number:</label>
-                    <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
-    
-                    <label for="date">Date of Booking:</label>
-                    <input type="date" id="email" name="email" placeholder="Enter the date of booking" required>
-    
-                    <label for="time">Time of Booking:</label>
-                    <input type="time" id="location" name="location" placeholder="Enter the time of booking" required>
-    
-                    <label for="quantity">No.of people on table:</label>
-                    <input type="number" id="order" name="order" min="0" max="100" step="1"  placeholder="Booking for: " required>
-    
-                    <button id="submit" type="button"> Submit </button>
-                </form>
-            </section>
-        
-
-            
+            <!-- login form -->
+            <div class="container">
+                <div class="wrapper">
+                  <div class="title"><span>Login Form</span></div>
+                  <form action="#">
+                    <div class="row">
+                      <i class="fas fa-user"></i>
+                      <input type="text" placeholder="Email " id="email" required>
+                    </div>
+                    <div class="row">
+                      <i class="fas fa-lock"></i>
+                      <input type="password" placeholder="Password" id="password" required>
+                    </div>
+                    <div class="pass"><a href="#">Forgot password?</a></div>
+                    <div class="row button">
+                      <input type="submit" value="Login" id="signIn">
+                    </div>
+                    <div class="signup-link">Not a member? <a href="signup.html">Signup now</a></div>
+                  </form>
+                </div>
+              </div>
+          
         </main>
-    <!--   footer start's here -->
+               <!--   footer start's here -->
     <footer class="main-footer">
       <section class="main-footer__wrapper">
         <div class="main-footer__col about">
@@ -147,28 +141,18 @@
     <!--   /footer end's here -->
     </body>
     <script type="module">
-		// Import the functions you need from the SDKs you need
-		   
-		// TODO: Add SDKs for Firebase products that you want to use
-		// https://firebase.google.com/docs/web/setup#available-libraries
-	  
-		// Your web app's Firebase configuration
-		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-		import { initializeApp } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js";
-		import { getDatabase,set,ref } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-database.js";
-		import { getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.17.1/firebase-auth.js";
-	   
-		import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.17.1/firebase-analytics.js";
-		// TODO: Add SDKs for Firebase products that you want to use
-		// https://firebase.google.com/docs/web/setup#available-libraries
-	  
-		// Your web app's Firebase configuration
-		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-	
-	
-		// BACKEND CHANGES
-		
-		const firebaseConfig = {
+        // Import the functions you need from the SDKs you need
+        
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-app.js";
+        import { getDatabase,set,ref } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-database.js";
+               
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-analytics.js";
+          import { getAuth, signInWithEmailAndPassword,signOut,createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.8.2/firebase-auth.js";
+           
+          
+          // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
       apiKey: "AIzaSyAi7rDsBnAuLcKYPFIh4i_VFPXqxq4aPEQ",
     authDomain: "restaurant-af622.firebaseapp.com",
     databaseURL: "https://restaurant-af622-default-rtdb.firebaseio.com",
@@ -177,52 +161,40 @@
     messagingSenderId: "1093727251361",
     appId: "1:1093727251361:web:719ec2a7dda42166c3b9e0",
     measurementId: "G-NVGCDH7C6R"
-	  };
-		
-		 
-		
-		// Initialize Firebase
-		const app = initializeApp(firebaseConfig);
-		const analytics = getAnalytics(app);
-		
-	  
-		// Initialize Firebase
-		
-		
-	 const db=getDatabase();
-	   var name=document.getElementById('name');
-       var mobile=document.getElementById('mobile');
-	   var date=document.getElementById('email');
-	   var time=document.getElementById('location');
-	   var people=document.getElementById('order');
-	   var button=document.getElementById('submit');
-	   
-	
-	   function data(){
-		
-		set(ref(db,'Booking/'+name.value),{
-			
-			name:name.value,
-            mobile:mobile.value,
-			date:date.value,
-			time:time.value,
-			people:people.value,
-		   
-	
-		})
-	    .then(()=>{
-	        alert("Your Booking Has Been Confirmed")
-	    })
-	  .catch(()=>{
-	    alert(error)
-		// window.location.href="payment.html"
-	  })
-		  }
-		 
-	button.addEventListener('click',data)
-	  
-	  </script>
-
-      
+      };          
+    // Initialize Firebase
     
+    const app =initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const database=getDatabase(app);
+    const auth = getAuth();
+    
+    
+    signIn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    var email=document.getElementById('email').value;
+    var password=document.getElementById('password').value;
+    
+    
+    signInWithEmailAndPassword(auth, email, password).catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage)
+    }).then((userCredential) => {
+    // Signed in 
+    
+    const user = userCredential.user;
+    if (user){
+    alert('welcome you are logged in')
+    
+    
+    }
+    
+    window.location.href="index.html"
+    
+    });
+    
+    })
+    
+    </script>
   </html>
